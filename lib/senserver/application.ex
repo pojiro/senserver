@@ -34,6 +34,7 @@ defmodule Senserver.Application do
       # Children for all targets except host
       # Starts a worker by calling: Senserver.Worker.start_link(arg)
       # {Senserver.Worker, arg},
+      {Senserver.I2CBusController, [bus_name: "i2c-1"]}
     ]
   end
 
